@@ -1,0 +1,145 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "app_aliado_tualiado",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "app_aliado_tualiado (profile mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "app_aliado_tualiado (release mode)",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "api_source",
+      "cwd": "modules\\api_source",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "api_source (profile mode)",
+      "cwd": "modules\\api_source",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "api_source (release mode)",
+      "cwd": "modules\\api_source",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "data",
+      "cwd": "modules\\data",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "data (profile mode)",
+      "cwd": "modules\\data",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "data (release mode)",
+      "cwd": "modules\\data",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "db_source",
+      "cwd": "modules\\db_source",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "db_source (profile mode)",
+      "cwd": "modules\\db_source",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "db_source (release mode)",
+      "cwd": "modules\\db_source",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "domain",
+      "cwd": "modules\\domain",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "domain (profile mode)",
+      "cwd": "modules\\domain",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "domain (release mode)",
+      "cwd": "modules\\domain",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "models",
+      "cwd": "modules\\models",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "models (profile mode)",
+      "cwd": "modules\\models",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "models (release mode)",
+      "cwd": "modules\\models",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    },
+    {
+      "name": "user_interface",
+      "cwd": "modules\\user_interface",
+      "request": "launch",
+      "type": "dart"
+    },
+    {
+      "name": "user_interface (profile mode)",
+      "cwd": "modules\\user_interface",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile"
+    },
+    {
+      "name": "user_interface (release mode)",
+      "cwd": "modules\\user_interface",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "release"
+    }
+  ]
+}

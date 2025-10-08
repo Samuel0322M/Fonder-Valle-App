@@ -1,0 +1,55 @@
+name: "infivalle"
+description: ""
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  models:
+    path: modules/models
+  domain:
+    path: modules/domain
+  db_source:
+    path: modules/db_source
+  data:
+    path: modules/data
+  api_source:
+    path: modules/api_source
+  user_interface:
+    path: modules/user_interface
+
+  injectable: ^2.5.0
+  get_it: ^8.0.3
+  dio: ^5.8.0+1
+  flutter_svg: ^2.0.17
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  injectable_generator: ^2.6.2
+  build_runner: ^2.4.15
+  flutter_launcher_icons: ^0.14.3
+  rename: ^3.0.2
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/images/logo.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/department_cities.json

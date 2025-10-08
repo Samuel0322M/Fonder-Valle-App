@@ -1,0 +1,28 @@
+name: data
+description: Minutapp
+version: 0.0.1
+homepage:
+publish_to: none
+
+environment:
+  sdk: ">=3.0.6 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  models:
+    path: ../models
+  domain:
+    path: ../domain
+
+  injectable: ^2.5.0
+  hive: ^2.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^5.4.5
+  flutter_lints: ^6.0.0
+  injectable_generator: ^2.6.2
+  build_runner: ^2.4.15

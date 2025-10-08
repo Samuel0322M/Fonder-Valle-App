@@ -1,0 +1,61 @@
+name: user_interface
+description: Minutapp.
+version: 1.0.0
+homepage:
+publish_to: none
+
+environment:
+  sdk: ">=3.1.1 <4.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pdf: ^3.10.8
+  printing: ^5.12.0
+  flutter_bloc: ^8.1.2
+  bloc: ^8.1.0
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  models:
+    path: ../models
+  domain:
+    path: ../domain
+
+
+
+  rxdart: ^0.28.0
+  injectable: ^2.5.0
+  get_it: ^8.0.3
+  flutter_svg: ^2.0.17
+  package_info_plus: ^8.3.0
+  path_provider: ^2.1.5
+  async: ^2.12.0
+  flutter_timezone: ^4.1.0
+  permission_handler: ^12.0.0+1
+  device_info_plus: ^11.3.3
+  internet_connection_checker_plus: ^2.7.1
+  connectivity_plus: ^6.1.4
+  flutter_multi_formatter: ^2.13.7
+  geolocator: ^14.0.0
+  image_picker: ^1.1.2
+  flutter_image_compress: ^2.4.0
+  file_picker: ^10.1.2
+  flutter_background_service: ^5.1.0
+  http: ^1.4.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  injectable_generator: ^2.6.2
+  build_runner: ^2.4.15
+  mockito: ^5.4.5
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+
