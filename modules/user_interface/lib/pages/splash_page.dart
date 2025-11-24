@@ -51,8 +51,8 @@ class _SplashPageState extends BaseState<SplashPage, SplashBloc> {
       backgroundColor: Colors.white,
       body: Center(
         child: Image.asset(
-          'assets/images/finansuenos_logo.png',
-          width: 160,
+          'assets/images/fondervalle_logo.png',
+          width: 340,
         ),
       ),
     );

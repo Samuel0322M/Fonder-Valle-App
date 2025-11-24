@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:user_interface/blocs/login_bloc.dart';
 import 'package:user_interface/pages/base_state.dart';
-import 'package:user_interface/pages/menu_page.dart';
-import 'package:user_interface/utils/application.dart';
+import 'package:user_interface/pages/home_page.dart';
+
 import 'package:user_interface/widgets/base_widget_page.dart';
 import 'package:user_interface/widgets/platform_positive_button.dart';
 import 'package:user_interface/widgets/text_field_with_label_widget.dart';
@@ -136,18 +136,10 @@ class _LoginPageState extends BaseState<LoginPage, LoginBloc> {
   void _listenLoginStream() {
     bloc.authenticationValueStream.listen((isAuthenticated) {
       if (isAuthenticated == true) {
-        final authData = Application().authenticationData;
-
-        // Extraés los nombres de app con acceso permitido
-        final allowedApps = authData.permisos
-            .where((p) => p.canAccess)
-            .map((p) => p.appName)
-            .toList();
 
         Navigator.pushReplacementNamed(
           context,
-          MenuPage.route,
-          arguments: allowedApps, // List<String>
+          HomePage.route
         );
       }
     });

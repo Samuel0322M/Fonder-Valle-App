@@ -7,7 +7,6 @@ import 'package:user_interface/pages/feedback_prospect_created_page.dart';
 import 'package:user_interface/pages/form_prospect_page.dart';
 import 'package:user_interface/pages/home_page.dart';
 import 'package:user_interface/pages/login_page.dart';
-import 'package:user_interface/pages/menu_page.dart';
 import 'package:user_interface/pages/onboarding_page.dart';
 import 'package:user_interface/pages/recibo_caja_page.dart';
 import 'package:user_interface/pages/tracking_prospect_page.dart';
@@ -30,7 +29,6 @@ class AppRoutes {
     CreateTrackingPage.route: CreateTrackingPage.buildPage,
     FeedbackProspectCreatedPage.route: FeedbackProspectCreatedPage.buildPage,
     TrackingProspectPage.route: TrackingProspectPage.buildPage,
-    MenuPage.route: MenuPage.buildPage,
     RecibosDeCaja.route: RecibosDeCaja.buildPage,
     AdditionalInfo.route: AdditionalInfo.buildPage,
     transunionCodeValidation.route: transunionCodeValidation.buildPage,

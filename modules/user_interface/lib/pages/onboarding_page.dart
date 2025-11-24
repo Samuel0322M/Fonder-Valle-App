@@ -51,7 +51,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
       body: Column(
         children: [
           const SizedBox(height: 60),
-          Image.asset('assets/images/finansuenos_logo.png', height: 80),
+          Image.asset('assets/images/fondervalle_logo.png', height: 120),
           Expanded(
             child: PageView.builder(
               controller: _pageController,

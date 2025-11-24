@@ -4,7 +4,7 @@ import 'package:domain/auth/get_login_local_use_case.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:user_interface/blocs/bloc.dart';
-import 'package:user_interface/pages/menu_page.dart';
+import 'package:user_interface/pages/home_page.dart';
 import 'package:user_interface/pages/onboarding_page.dart';
 import 'package:user_interface/utils/application.dart';
 
@@ -34,8 +34,7 @@ class SplashBloc extends Bloc {
 
       // navigateTo(HomePage.route);
       navigateTo(RouteSettings(
-        name: MenuPage.route,
-        arguments: session.permisosApps ?? [],
+        name: HomePage.route,
       ));
     } else {
       navigateTo(const RouteSettings(name: OnboardingPage.route));

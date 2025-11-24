@@ -18,12 +18,12 @@ class AppColors {
     900: Color.fromRGBO(255, 138, 61, 1),
   };
 
-  static MaterialColor primarySwatch = const MaterialColor(0xFF2720A5, primary);
+  static MaterialColor primarySwatch = const MaterialColor(0xFF4CD964, primary);
 
   // Colores principales
-  static const Color primaryDark = Color(0xFF2720A5);
+  static const Color primaryDark = Color(0xFF005A2B);
   //static const Color primaryDark = Color(0xFF22CAD6);
-  static const Color secondaryColor = Color(0xFF22CAD6);
+  static const Color secondaryColor = Color(0xFFA9D9F5);
   //static const Color secondaryColor = Color(0xFF2720A5);
   static const Color backgroundLight = Colors.white;
   static const Color backgroundDark = Color(0xFFF5F5F5);

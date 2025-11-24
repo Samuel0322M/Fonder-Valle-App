@@ -101,7 +101,7 @@ abstract class Values {
   static const double cupertinoPickerSqueeze = 1.2;
 
   // Logo
-  static const double heightLogoApp = 66.0;
+  static const double heightLogoApp = 80.0;
   static const double leadingWidthLogoApp = 120.0;
 
   // SliverAppBar
