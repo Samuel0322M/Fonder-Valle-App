@@ -11,8 +11,6 @@ import 'package:models/create_prospect_request.dart';
 import 'package:models/department_response.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:user_interface/blocs/bloc.dart';
-import 'package:user_interface/pages/transunion_code_send_page.dart';
-import 'package:user_interface/pages/transunion_questions_page.dart';
 import 'package:user_interface/utils/application.dart';
 import 'package:user_interface/utils/extensions/behavior_subject_extension.dart';
 import 'package:user_interface/utils/internet_connectivity_universal_util.dart';
@@ -483,63 +481,20 @@ class CreateProspectBloc extends Bloc {
 
     var createProspect = _buildCreateProspectRequest(numberID, geolocationString);
 
-    _createProspectUseCase.save(createProspect).then((response) {
-      final currentQueueValue = response.data?.respuestaTransunion?.CurrentQueue;
-      final applicationId = response.data?.respuestaTransunion?.ApplicationId;
-      final prospectId = response.data?.prospectId;
-      final examen = response.data?.respuestaTransunion?.Examen;
-
+    _createProspectUseCase.save(createProspect).then((value) {
       handleLoading(false);
-
-      if (examen is Map<String, dynamic>) {
-        // Si tenemos examen en formato JSON, vamos a la página de preguntas
-        showDialogMessage(
-            message:
-                "${l10n.prospectusCreatedSuccessfully} \n Se ha consulado correctamente se procedera a realizar las preguntas",
-            positiveButtonCallback: () {
-              Navigator.pushNamed(
-                context,
-                TransunionQuestionsPage.route,
-                arguments: {
-                  'applicationId': applicationId,
-                  'prospectId': prospectId,
-                  'examen': examen,
-                  'cedulaCliente': _idNumber,
-                },
-              );
-            });
-      } else if (currentQueueValue == "PinVerification_OTPInput") {
-        // Si no hay examen, revisamos si es OTP u otro flujo
-        showDialogMessage(
-            message:
-                "${l10n.prospectusCreatedSuccessfully} \n Se ha consulado correctamente se procedera a solicitar el codigo OTP",
-            positiveButtonCallback: () {
-              Navigator.pushNamed(
-                context,
-                transunionCodeValidation.route,
-                arguments: {
-                  'applicationId': applicationId,
-                  'prospectId': prospectId,
-                  'cedulaCliente': _idNumber,
-                },
-              );
-            });
-      } else {
-        showDialogMessage(
-          message: "${l10n.prospectusCreatedSuccessfully} \n No se pudo confirmar la identidad del cliente.",
-          positiveButtonCallback: () => canGoBack.value = true,
-        );
-      }
+      showDialogMessage(
+        message: l10n.prospectusCreatedSuccessfully,
+        positiveButtonCallback: () => canGoBack.value = true,
+      );
     }).onError((error, trace) {
-      // Si falla la conexión o hay error en el endpoint
-      handleLoading(false);
-
       _createProspectLocalUseCase.save(createProspect).then((_) {
         showDialogMessage(
           message: 'Se ha almacenado localmente',
           positiveButtonCallback: () => canGoBack.value = true,
         );
       }).onError((error, trace) {
+        handleLoading(false);
         showDialogMessage(message: l10n.messageErrorGeneral);
       });
     }).whenComplete(() {

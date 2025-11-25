@@ -118,7 +118,7 @@ class _TrackingProspectPageState
           backgroundColor: Color(0xFFEAEBFF),
           child: Icon(
             Icons.person_outline,
-            color: Colors.blue,
+            color: Colors.green,
           ),
         ),
         const SizedBox(height: 10),
@@ -152,7 +152,7 @@ class _TrackingProspectPageState
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
             decoration: BoxDecoration(
-              color: Colors.blue,
+              color: Colors.green,
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(

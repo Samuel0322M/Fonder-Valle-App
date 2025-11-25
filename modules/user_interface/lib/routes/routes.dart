@@ -8,10 +8,8 @@ import 'package:user_interface/pages/form_prospect_page.dart';
 import 'package:user_interface/pages/home_page.dart';
 import 'package:user_interface/pages/login_page.dart';
 import 'package:user_interface/pages/onboarding_page.dart';
-import 'package:user_interface/pages/recibo_caja_page.dart';
 import 'package:user_interface/pages/tracking_prospect_page.dart';
-import 'package:user_interface/pages/transunion_code_send_page.dart';
-import 'package:user_interface/pages/transunion_questions_page.dart';
+
 
 typedef OnPageBuilder = Widget Function(
   BuildContext context,
@@ -29,10 +27,8 @@ class AppRoutes {
     CreateTrackingPage.route: CreateTrackingPage.buildPage,
     FeedbackProspectCreatedPage.route: FeedbackProspectCreatedPage.buildPage,
     TrackingProspectPage.route: TrackingProspectPage.buildPage,
-    RecibosDeCaja.route: RecibosDeCaja.buildPage,
+    
     AdditionalInfo.route: AdditionalInfo.buildPage,
-    transunionCodeValidation.route: transunionCodeValidation.buildPage,
-    TransunionQuestionsPage.route: TransunionQuestionsPage.buildPage,
     CreateCodeudorPage.route: CreateCodeudorPage.buildPage,
     FormProspectPage.route :FormProspectPage.buildPage
   };

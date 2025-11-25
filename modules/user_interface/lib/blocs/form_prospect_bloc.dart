@@ -7,8 +7,6 @@ import 'package:intl/intl.dart';
 import 'package:models/department_response.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:user_interface/blocs/bloc.dart';
-import 'package:user_interface/pages/transunion_code_send_page.dart';
-import 'package:user_interface/pages/transunion_questions_page.dart';
 import 'package:user_interface/utils/extensions/behavior_subject_extension.dart';
 import 'package:user_interface/utils/internet_connectivity_universal_util.dart';
 import 'package:user_interface/utils/load_department.dart';
@@ -482,54 +480,14 @@ class FormProspectBloc extends Bloc {
       handleLoading(false);
 
       if (response.statusCode == 200) {
-        final data = jsonDecode(response.body);
-
-        print("Response Data: $data");
-
-        // Ajustamos la lectura igual a lo que tenías
-        final currentQueueValue = data["data"]?["respuestaTransunion"]?["CurrentQueue"];
-        final applicationId = data["data"]?["respuestaTransunion"]?["ApplicationId"];
-        final prospectId = data["data"]?["id_prospecto"];
-        final examen = data["data"]?["respuestaTransunion"]?["Examen"];
-
-        if (examen is Map<String, dynamic>) {
           // Si tenemos examen en formato JSON, vamos a la página de preguntas
           showDialogMessage(
-              message: "Se ha consulado correctamente se procedera a realizar las preguntas",
-              positiveButtonCallback: () {
-                Navigator.pushNamed(
-                  context,
-                  TransunionQuestionsPage.route,
-                  arguments: {
-                    'applicationId': applicationId,
-                    'prospectId': prospectId,
-                    'examen': examen,
-                    'cedulaCliente': _idNumber,
-                  },
-                );
-              });
-        } else if (currentQueueValue == "PinVerification_OTPInput") {
-          // Si no hay examen, revisamos si es OTP u otro flujo
-          showDialogMessage(
-              message: "Se ha consulado correctamente se procedera a solicitar el codigo OTP",
-              positiveButtonCallback: () {
-                Navigator.pushNamed(
-                  context,
-                  transunionCodeValidation.route,
-                  arguments: {
-                    'applicationId': applicationId,
-                    'prospectId': prospectId,
-                    'cedulaCliente': _idNumber,
-                  },
-                );
-              });
-        } else {
-          showDialogMessage(
-            message: "No se pudo confirmar la identidad del cliente.",
+            message: "Se actualizo la informacion del prospecto.",
             positiveButtonCallback: () => canGoBack.value = true,
           );
-        }
-      } else {
+       
+          // Si no hay examen, revisamos si es OTP u otro flujo
+          } else {
         showDialogMessage(
           title: l10n.titleError,
           message: "Error del servidor: ${response.statusCode}",

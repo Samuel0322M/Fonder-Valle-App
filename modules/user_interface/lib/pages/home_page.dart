@@ -64,22 +64,6 @@ class _HomePageState extends BaseState<HomePage, HomeBloc> {
           ),
         ],
       ),
-      floatingActionButton: Padding(
-        padding: const EdgeInsets.only(bottom: 75),
-        child: FloatingActionButton(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          child: const Icon(
-            Icons.arrow_back_ios,
-            color: AppColors.iconDark,
-            size: 20,
-          ),
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
       backgroundColor: Colors.grey.shade200,
       body: Stack(
         children: [
@@ -255,7 +239,7 @@ class _HomePageState extends BaseState<HomePage, HomeBloc> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(icon, color: Colors.blue.shade700, size: 30),
+        Icon(icon, color: Colors.green.shade700, size: 30),
         const SizedBox(height: 5),
         Text(
           label,
@@ -330,7 +314,7 @@ class _HomePageState extends BaseState<HomePage, HomeBloc> {
                         padding: EdgeInsets.only(right: 10),
                         child: CircleAvatar(
                           backgroundColor: Color(0xFFEAEBFF),
-                          child: Icon(Icons.person_outline, color: Colors.blue),
+                          child: Icon(Icons.person_outline, color: Colors.green),
                         ),
                       ),
                       Expanded(
@@ -415,7 +399,7 @@ class _HomePageState extends BaseState<HomePage, HomeBloc> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
           decoration: BoxDecoration(
-            color: Colors.lightBlue,
+            color: Colors.lightGreen,
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(
@@ -449,7 +433,7 @@ class _HomePageState extends BaseState<HomePage, HomeBloc> {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
           decoration: BoxDecoration(
-            color: const Color.fromARGB(255, 0, 11, 110),
+            color: AppColors.buttonPositive,
             borderRadius: BorderRadius.circular(20),
             boxShadow: [
               BoxShadow(

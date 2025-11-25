@@ -88,7 +88,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
             child: ElevatedButton(
               onPressed: _nextPage,
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue.shade700,
+                backgroundColor: Colors.green.shade700,
                 minimumSize: const Size.fromHeight(50),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25),
@@ -114,7 +114,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
           width: isActive ? 20 : 8,
           height: 8,
           decoration: BoxDecoration(
-            color: isActive ? Colors.blue : Colors.grey.shade400,
+            color: isActive ? Colors.green : Colors.grey.shade400,
             borderRadius: BorderRadius.circular(4),
           ),
         );

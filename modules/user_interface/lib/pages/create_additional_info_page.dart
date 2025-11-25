@@ -142,7 +142,7 @@ class _AdditionalInfoState extends State<AdditionalInfo> {
                 currentPageIndex = index;
               });
             },
-            indicatorColor: Colors.blue,
+            indicatorColor: Colors.green,
             selectedIndex: currentPageIndex,
             destinations: const <Widget>[
               NavigationDestination(
